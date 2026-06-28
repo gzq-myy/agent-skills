@@ -7,7 +7,7 @@ description: Run a TDD workflow by writing failing tests, implementing, and veri
 
 ## Overview
 
-Run the test-driven workflow. Invoke `skills/test-driven-development/SKILL.md`; for new features, write failing tests for expected behavior before implementation, and for bugs, reproduce the failure first with the Prove-It pattern.
+Use the `test-driven-development` skill. For new behavior, write failing tests before implementation; for bugs, reproduce the failure first with the Prove-It pattern.
 
 ## When to Use
 
@@ -17,12 +17,12 @@ Run the test-driven workflow. Invoke `skills/test-driven-development/SKILL.md`; 
 
 ## Process
 
-1. Follow `skills/test-driven-development/SKILL.md`.
+1. Use the `test-driven-development` skill.
 2. For new behavior, write tests that describe the expected outcome and confirm they fail before implementation.
 3. For bugs, write a test that reproduces the bug and confirm it fails.
 4. Implement the minimum code needed to pass.
 5. Refactor only while tests stay green.
-6. For browser-facing issues, also follow `skills/browser-testing-with-devtools/SKILL.md` when runtime verification is needed.
+6. For browser-facing issues, also use the `browser-testing-with-devtools` skill when runtime verification is needed.
 
 ## Verification
 
@@ -35,8 +35,8 @@ Run the test-driven workflow. Invoke `skills/test-driven-development/SKILL.md`; 
 
 | Rationalization | Reality |
 |---|---|
-| "The fix is simple, no test needed." | Tests are the proof that behavior is correct and guarded. |
-| "I'll write tests after the code." | This workflow starts with the failing test when behavior changes. |
+| "The fix is simple, no test needed." | `@test` exists to prove behavior with tests. |
+| "I'll write tests after the code." | This workflow starts with a failing test when behavior changes. |
 
 ## Red Flags
 

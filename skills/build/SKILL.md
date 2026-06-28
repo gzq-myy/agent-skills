@@ -7,7 +7,7 @@ description: Implement tasks incrementally - build, test, verify, and commit. Us
 
 ## Overview
 
-Implement planned work through the same build, test, and verify loop as `/build`. Invoke `skills/incremental-implementation/SKILL.md` alongside `skills/test-driven-development/SKILL.md`; run one task by default, or run the whole approved plan when the user asks for `@build auto`.
+Use the `incremental-implementation` skill alongside the `test-driven-development` skill. Implement the next planned task by default, or run the whole approved plan when the user asks for `@build auto` or `@build all`.
 
 ## When to Use
 
@@ -24,21 +24,20 @@ Implement planned work through the same build, test, and verify loop as `/build`
 
 1. Read the next pending task from `tasks/todo.md` or `tasks/plan.md`.
 2. If no plan exists, stop and ask the user to run `@plan` first.
-3. Follow `skills/incremental-implementation/SKILL.md`.
-4. Follow `skills/test-driven-development/SKILL.md`.
-5. Read the task's acceptance criteria.
-6. Load only the relevant context and existing patterns.
-7. Write or update tests first when behavior changes.
-8. Implement the minimum code needed for the task.
-9. Run the task's verification, plus relevant regression checks.
-10. Mark the task complete and stop.
+3. Use the `incremental-implementation` skill and the `test-driven-development` skill.
+4. Read the task's acceptance criteria.
+5. Load only the relevant context and existing patterns.
+6. Write or update tests first when behavior changes.
+7. Implement the minimum code needed for the task.
+8. Run the task's verification, plus relevant regression checks.
+9. Mark the task complete and stop.
 
 ## Auto: Whole Plan
 
 1. Require a spec at `SPEC.md`, `docs/SPEC.md`, or `spec/*`. If none exists, stop and ask the user to run `@spec` first.
 2. Run `git status --porcelain`.
 3. If unrelated local changes exist outside expected planning artifacts, ask how to proceed before editing.
-4. If `tasks/plan.md` does not exist, follow `skills/planning-and-task-breakdown/SKILL.md` and create it.
+4. If `tasks/plan.md` does not exist, use the `planning-and-task-breakdown` skill and create it.
 5. Present the full plan and wait for explicit approval such as "approve", "go", or "yes".
 6. After approval, execute every task in dependency order.
 7. For each task, run the default loop: test, implement, verify, update task status.
@@ -56,9 +55,9 @@ Implement planned work through the same build, test, and verify loop as `/build`
 
 | Rationalization | Reality |
 |---|---|
-| "I'll implement several tasks at once." | Build one task at a time unless `@build auto` was explicitly approved. |
-| "I'll test at the end." | Each task needs its own verification before moving on. |
-| "I'll include this small cleanup." | Keep each task scoped and separately reviewable. |
+| "I'll implement several tasks at once." | Default `@build` handles one task; whole-plan execution needs `@build auto` approval. |
+| "I'll test at the end." | Each task needs its own test and verification loop. |
+| "I'll include this small cleanup." | Keep task commits scoped and rollback-friendly. |
 
 ## Red Flags
 

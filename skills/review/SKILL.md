@@ -7,7 +7,7 @@ description: Conduct a five-axis code review across correctness, readability, ar
 
 ## Overview
 
-Review the current changes across the five `/review` axes. Invoke `skills/code-review-and-quality/SKILL.md`, inspect staged changes, unstaged changes, or recent commits as requested, then return prioritized findings with file and line references.
+Use the `code-review-and-quality` skill. Review the current changes across correctness, readability, architecture, security, and performance, then return prioritized findings with file and line references.
 
 ## When to Use
 
@@ -17,11 +17,11 @@ Review the current changes across the five `/review` axes. Invoke `skills/code-r
 
 ## Process
 
-1. Follow `skills/code-review-and-quality/SKILL.md`.
+1. Use the `code-review-and-quality` skill.
 2. Review staged changes, unstaged changes, or recent commits as requested.
 3. Check correctness, readability, architecture, security, and performance.
-4. Use `skills/security-and-hardening/SKILL.md` for security-sensitive changes.
-5. Use `skills/performance-optimization/SKILL.md` for performance-sensitive changes.
+4. Use the `security-and-hardening` skill for security-sensitive changes.
+5. Use the `performance-optimization` skill for performance-sensitive changes.
 6. Prioritize findings by severity and include file and line references.
 
 ## Output
@@ -38,8 +38,8 @@ Report findings first, then open questions or assumptions, then a short summary.
 
 | Rationalization | Reality |
 |---|---|
-| "I'll summarize first." | Reviews should lead with findings so risks are visible. |
-| "This is just style." | Review correctness, risk, and missing tests before style. |
+| "I'll summarize first." | `@review` should lead with findings so risks are visible. |
+| "This is just style." | Correctness, risk, and missing tests come before style. |
 
 ## Red Flags
 

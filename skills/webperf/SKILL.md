@@ -7,7 +7,7 @@ description: Run a web performance audit for browser-facing applications. Use wh
 
 ## Overview
 
-Audit browser-facing performance only. Use Deep mode when Lighthouse, PageSpeed Insights, CrUX, DevTools trace, a live URL with browser tooling, or equivalent runtime metrics are available; otherwise use Quick mode and label findings as potential impact.
+Audit browser-facing performance only. Use Deep mode when Lighthouse, PageSpeed Insights, CrUX, a DevTools trace, a live URL with browser tooling, or equivalent runtime metrics are available; otherwise use Quick mode and label findings as potential impact.
 
 ## When to Use
 
@@ -20,8 +20,8 @@ Audit browser-facing performance only. Use Deep mode when Lighthouse, PageSpeed 
 1. Determine whether the target is browser-facing. If not, explain that `@webperf` is not the right workflow.
 2. Use Deep mode when the user provides Lighthouse JSON, PageSpeed Insights JSON, CrUX data, a DevTools trace, a live URL with browser tooling, or equivalent runtime metrics.
 3. Use Quick mode when runtime metrics are unavailable; label findings as potential impact.
-4. Apply the `agents/web-performance-auditor.md` persona if available.
-5. For browser runtime investigation, follow `skills/browser-testing-with-devtools/SKILL.md` when tooling is configured.
+4. Apply the web performance auditor persona if available.
+5. For browser runtime investigation, use the `browser-testing-with-devtools` skill when tooling is configured.
 6. Return the full audit report without unnecessary synthesis.
 
 ## Verification
@@ -36,7 +36,7 @@ Audit browser-facing performance only. Use Deep mode when Lighthouse, PageSpeed 
 | Rationalization | Reality |
 |---|---|
 | "Source inspection is enough." | Runtime metrics are required for measured performance claims. |
-| "Any app can use webperf." | This workflow is for browser-facing surfaces. |
+| "Any app can use webperf." | `@webperf` is only for browser-facing surfaces. |
 
 ## Red Flags
 

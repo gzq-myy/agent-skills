@@ -7,7 +7,7 @@ description: Simplify code for clarity and maintainability without changing beha
 
 ## Overview
 
-Simplify recently changed code or the specified scope while preserving exact behavior. Invoke `skills/code-simplification/SKILL.md`, study the code and its tests first, apply simplifications incrementally, and verify the result.
+Use the `code-simplification` skill. Simplify recently changed code or the specified scope for clarity and maintainability while preserving exact behavior.
 
 ## When to Use
 
@@ -17,7 +17,7 @@ Simplify recently changed code or the specified scope while preserving exact beh
 
 ## Process
 
-1. Follow `skills/code-simplification/SKILL.md`.
+1. Use the `code-simplification` skill.
 2. Read project conventions before editing.
 3. Identify the target scope from the user request, recent changes, or current diff.
 4. Understand purpose, callers, edge cases, and test coverage before changing code.
@@ -36,7 +36,7 @@ Simplify recently changed code or the specified scope while preserving exact beh
 
 | Rationalization | Reality |
 |---|---|
-| "I'll refactor broadly while here." | Simplification should stay inside the requested scope. |
+| "I'll refactor broadly while here." | `@code-simplify` stays inside the requested scope. |
 | "This abstraction might help later." | Do not add abstractions without a current use. |
 
 ## Red Flags

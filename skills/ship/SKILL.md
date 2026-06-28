@@ -7,7 +7,7 @@ description: Run the pre-launch checklist with specialist review and a go/no-go 
 
 ## Overview
 
-Run the pre-launch review. Invoke `skills/shipping-and-launch/SKILL.md`, fan out to the quality, security, and test perspectives when appropriate, then synthesize blockers, recommended fixes, acknowledged risks, a rollback plan, and a `GO` or `NO-GO` decision.
+Use the `shipping-and-launch` skill. Run the pre-launch review, fan out to quality, security, and test perspectives when appropriate, then synthesize blockers, recommended fixes, acknowledged risks, a rollback plan, and a `GO` or `NO-GO` decision.
 
 ## When to Use
 
@@ -17,12 +17,12 @@ Run the pre-launch review. Invoke `skills/shipping-and-launch/SKILL.md`, fan out
 
 ## Process
 
-1. Follow `skills/shipping-and-launch/SKILL.md`.
+1. Use the `shipping-and-launch` skill.
 2. Review the current change, staged diff, or release candidate.
 3. Run or emulate the three specialist reviews:
-   - `agents/code-reviewer.md` for code quality.
-   - `agents/security-auditor.md` for security and threat modeling.
-   - `agents/test-engineer.md` for coverage and test gaps.
+   - `code-reviewer` for code quality.
+   - `security-auditor` for security and threat modeling.
+   - `test-engineer` for coverage and test gaps.
 4. If a subagent tool is available, run the reviews independently and merge their reports. If not, apply each persona sequentially and treat the outputs as independent reports.
 5. Verify accessibility, infrastructure, documentation, monitoring, migrations, feature flags, and rollback readiness directly.
 6. Produce a single `GO` or `NO-GO` decision.
@@ -42,7 +42,7 @@ Include blockers, recommended fixes, acknowledged risks, rollback plan, and spec
 | Rationalization | Reality |
 |---|---|
 | "The diff is small, so it can ship." | Small diffs can still affect security, data, or operations. |
-| "Rollback is obvious." | A GO decision needs an explicit rollback plan. |
+| "Rollback is obvious." | `@ship` requires an explicit rollback plan before any `GO` decision. |
 
 ## Red Flags
 

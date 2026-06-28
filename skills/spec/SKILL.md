@@ -7,17 +7,17 @@ description: Start spec-driven development by writing a structured specification
 
 ## Overview
 
-Write a structured spec before implementation. Invoke `skills/spec-driven-development/SKILL.md`, clarify the user's objective, core features, acceptance criteria, tech stack constraints, and boundaries, then save the result as `SPEC.md`.
+Use the `spec-driven-development` skill. Write a structured spec before implementation by clarifying the user's objective, target users, core features, acceptance criteria, tech stack constraints, and boundaries, then create or update `SPEC.md`.
 
 ## When to Use
 
 - The user asks for `@spec`, `/spec`, a spec, requirements, acceptance criteria, or a feature definition.
 - A feature or significant change should be clarified before implementation.
-- Requirements are ambiguous and need a written source of truth.
+- Requirements need a written source of truth before planning or code changes.
 
 ## Process
 
-1. Follow `skills/spec-driven-development/SKILL.md`.
+1. Use the `spec-driven-development` skill.
 2. Understand the objective, target users, core features, acceptance criteria, tech stack constraints, and boundaries.
 3. Ask clarifying questions when requirements are ambiguous.
 4. Create or update `SPEC.md` in the project root unless the user requests another path.
@@ -36,8 +36,8 @@ Write a structured spec before implementation. Invoke `skills/spec-driven-develo
 
 | Rationalization | Reality |
 |---|---|
-| "I'll just start coding." | This entrypoint exists to create the spec before implementation. |
-| "The request is obvious." | Obvious requests still need success criteria and boundaries. |
+| "I'll start coding and write the spec later." | `@spec` means define the work before implementation. |
+| "The request is obvious." | The spec still needs explicit acceptance criteria and boundaries. |
 
 ## Red Flags
 

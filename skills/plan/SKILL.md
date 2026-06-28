@@ -7,7 +7,7 @@ description: Break work into small verifiable tasks with acceptance criteria and
 
 ## Overview
 
-Break an existing spec into small, ordered, verifiable tasks. Invoke `skills/planning-and-task-breakdown/SKILL.md`, read `SPEC.md` or the equivalent spec, then save the plan to `tasks/plan.md` and the task list to `tasks/todo.md`.
+Use the `planning-and-task-breakdown` skill. Break an existing spec into small, ordered, verifiable tasks, then save the plan to `tasks/plan.md` and the task list to `tasks/todo.md`.
 
 ## When to Use
 
@@ -17,7 +17,7 @@ Break an existing spec into small, ordered, verifiable tasks. Invoke `skills/pla
 
 ## Process
 
-1. Follow `skills/planning-and-task-breakdown/SKILL.md`.
+1. Use the `planning-and-task-breakdown` skill.
 2. Read the existing spec from `SPEC.md`, `docs/SPEC.md`, or `spec/*`.
 3. If no spec exists, stop and ask the user to run `@spec` first or provide the spec path.
 4. Read only during planning; do not implement code.
@@ -38,8 +38,8 @@ Break an existing spec into small, ordered, verifiable tasks. Invoke `skills/pla
 
 | Rationalization | Reality |
 |---|---|
-| "I can plan while coding." | Planning should happen before implementation so dependencies and verification are explicit. |
-| "The tasks are obvious." | Write them down so progress and review are concrete. |
+| "I can plan while coding." | `@plan` is read-only planning before implementation. |
+| "The tasks are obvious." | The command produces concrete task files with acceptance criteria and verification. |
 
 ## Red Flags
 
