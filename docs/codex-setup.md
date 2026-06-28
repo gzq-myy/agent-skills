@@ -41,18 +41,27 @@ If you merge the change into the fork's default branch, omit `--ref`.
 
 ## Usage
 
-Invoke a skill directly in Codex chat with `@`, for example:
+Use the short Codex entrypoint skills in chat:
 
 ```text
-@spec-driven-development
-@planning-and-task-breakdown
-@incremental-implementation
-@test-driven-development
-@code-review-and-quality
+@spec
+@plan
+@build
+@build auto
+@test
+@review
+@ship
+@code-simplify
+@webperf
 ```
 
-You can also describe the task normally and let Codex choose the matching skill
-when plugin skills are available.
+These mirror the Claude Code slash command workflows. Codex does not currently
+register plugin-provided slash commands, so use `@spec` instead of `/spec`,
+`@plan` instead of `/plan`, and `@build` instead of `/build`.
+
+You can still invoke the underlying lifecycle skills directly, such as
+`@spec-driven-development` or `@planning-and-task-breakdown`, when you want the
+base workflow without command-style orchestration.
 
 ## How it works
 
@@ -60,9 +69,11 @@ when plugin skills are available.
   marketplace and points the `agent-skills` plugin at the repository root.
 - `.codex-plugin/plugin.json` is the Codex plugin manifest.
 - `skills/` is the shared skill directory consumed by Codex and other agents.
+  Short wrapper skills such as `@spec`, `@plan`, and `@build` provide Codex
+  entrypoints for the Claude Code slash command workflows.
 
 Claude Code slash commands in `.claude/commands/` remain Claude-specific. In
-Codex, use the underlying skill name instead of the slash command.
+Codex, use the corresponding entrypoint skill instead of the slash command.
 
 ## Troubleshooting
 

@@ -158,7 +158,7 @@ codex plugin marketplace add /path/to/agent-skills
 codex plugin add agent-skills@agent-skills
 ```
 
-After installation, start a new Codex thread and invoke skills directly, such as `@spec-driven-development`. See [docs/codex-setup.md](docs/codex-setup.md).
+After installation, start a new Codex thread and use the Codex entrypoint skills (`@spec`, `@plan`, `@build`, etc.). See [docs/codex-setup.md](docs/codex-setup.md).
 
 </details>
 
@@ -173,15 +173,28 @@ Skills are plain Markdown - they work with any agent that accepts system prompts
 
 ---
 
-## All 24 Skills
+## All 32 Skills
 
-The commands above are entry points. The pack includes 24 skills total — 23 lifecycle skills plus the `using-agent-skills` meta-skill. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
+The commands above are entry points. The pack includes 32 skills total — 23 lifecycle skills, 1 meta-skill, and 8 Codex-friendly command wrappers. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
 
 ### Meta - Discover which skill applies
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
 | [using-agent-skills](skills/using-agent-skills/SKILL.md) | Maps incoming work to the right skill workflow and defines shared operating rules | Starting a session or deciding which skill applies |
+
+### Codex entrypoints - Claude-style command wrappers
+
+| Skill | What It Does | Use When |
+|-------|-------------|----------|
+| [spec](skills/spec/SKILL.md) | Codex entrypoint for the `/spec` workflow | Use `@spec` when defining requirements before implementation |
+| [plan](skills/plan/SKILL.md) | Codex entrypoint for the `/plan` workflow | Use `@plan` when breaking a spec into tasks |
+| [build](skills/build/SKILL.md) | Codex entrypoint for the `/build` workflow | Use `@build` or `@build auto` when implementing planned tasks |
+| [test](skills/test/SKILL.md) | Codex entrypoint for the `/test` workflow | Use `@test` for TDD or bug reproduction |
+| [review](skills/review/SKILL.md) | Codex entrypoint for the `/review` workflow | Use `@review` for code review |
+| [ship](skills/ship/SKILL.md) | Codex entrypoint for the `/ship` workflow | Use `@ship` for release readiness |
+| [code-simplify](skills/code-simplify/SKILL.md) | Codex entrypoint for the `/code-simplify` workflow | Use `@code-simplify` when simplifying code |
+| [webperf](skills/webperf/SKILL.md) | Codex entrypoint for the `/webperf` workflow | Use `@webperf` for browser-facing performance audits |
 
 ### Define - Clarify what to build
 
@@ -304,7 +317,7 @@ Every skill follows a consistent anatomy:
 
 ```
 agent-skills/
-├── skills/                            # 24 skills (23 lifecycle + 1 meta)
+├── skills/                            # 32 skills (23 lifecycle + 1 meta + 8 Codex wrappers)
 │   ├── interview-me/                  #   Define
 │   ├── idea-refine/                   #   Define
 │   ├── spec-driven-development/       #   Define
@@ -328,6 +341,14 @@ agent-skills/
 │   ├── documentation-and-adrs/        #   Ship
 │   ├── observability-and-instrumentation/ # Ship
 │   ├── shipping-and-launch/           #   Ship
+│   ├── spec/                          #   Codex wrapper for /spec
+│   ├── plan/                          #   Codex wrapper for /plan
+│   ├── build/                         #   Codex wrapper for /build
+│   ├── test/                          #   Codex wrapper for /test
+│   ├── review/                        #   Codex wrapper for /review
+│   ├── ship/                          #   Codex wrapper for /ship
+│   ├── code-simplify/                 #   Codex wrapper for /code-simplify
+│   ├── webperf/                       #   Codex wrapper for /webperf
 │   └── using-agent-skills/            #   Meta: how to use this pack
 ├── agents/                            # 4 specialist personas
 ├── references/                        # 5 supplementary checklists
