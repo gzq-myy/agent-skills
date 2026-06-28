@@ -1,13 +1,13 @@
 ---
 name: ship
-description: Run a pre-launch go/no-go review with quality, security, testing, rollback, and launch checks. Use when the user asks for ship, /ship, @ship, release readiness, or launch review.
+description: Run the pre-launch checklist with specialist review and a go/no-go decision. Use when the user asks for ship, /ship, @ship, release readiness, launch review, rollback planning, or go/no-go.
 ---
 
 # Ship
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/ship` command. This wrapper uses `skills/shipping-and-launch/SKILL.md` and the review personas in `agents/`.
+Run the pre-launch review. Invoke `skills/shipping-and-launch/SKILL.md`, fan out to the quality, security, and test perspectives when appropriate, then synthesize blockers, recommended fixes, acknowledged risks, a rollback plan, and a `GO` or `NO-GO` decision.
 
 ## When to Use
 

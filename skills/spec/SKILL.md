@@ -1,13 +1,13 @@
 ---
 name: spec
-description: Create or update SPEC.md before implementation. Use when starting a feature, clarifying requirements, writing acceptance criteria, or when the user asks for spec, /spec, or @spec.
+description: Start spec-driven development by writing a structured specification before code. Use when the user asks for spec, /spec, @spec, requirements, acceptance criteria, or feature definition.
 ---
 
 # Spec
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/spec` command. This is a thin wrapper around `skills/spec-driven-development/SKILL.md`.
+Write a structured spec before implementation. Invoke `skills/spec-driven-development/SKILL.md`, clarify the user's objective, core features, acceptance criteria, tech stack constraints, and boundaries, then save the result as `SPEC.md`.
 
 ## When to Use
 

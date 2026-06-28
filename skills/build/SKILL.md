@@ -1,13 +1,13 @@
 ---
 name: build
-description: Implement planned tasks incrementally. Use when the user asks for build, /build, @build, build auto, implement the next task, or run the approved plan.
+description: Implement tasks incrementally - build, test, verify, and commit. Use when the user asks for build, /build, @build, build auto, implement the next task, or run the approved plan.
 ---
 
 # Build
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/build` command. This wrapper orchestrates `skills/incremental-implementation/SKILL.md` and `skills/test-driven-development/SKILL.md`.
+Implement planned work through the same build, test, and verify loop as `/build`. Invoke `skills/incremental-implementation/SKILL.md` alongside `skills/test-driven-development/SKILL.md`; run one task by default, or run the whole approved plan when the user asks for `@build auto`.
 
 ## When to Use
 

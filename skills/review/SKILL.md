@@ -1,13 +1,13 @@
 ---
 name: review
-description: Review current changes across correctness, readability, architecture, security, and performance. Use when the user asks for review, /review, @review, code review, or pre-merge review.
+description: Conduct a five-axis code review across correctness, readability, architecture, security, and performance. Use when the user asks for review, /review, @review, code review, or pre-merge review.
 ---
 
 # Review
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/review` command. This is a thin wrapper around `skills/code-review-and-quality/SKILL.md`.
+Review the current changes across the five `/review` axes. Invoke `skills/code-review-and-quality/SKILL.md`, inspect staged changes, unstaged changes, or recent commits as requested, then return prioritized findings with file and line references.
 
 ## When to Use
 

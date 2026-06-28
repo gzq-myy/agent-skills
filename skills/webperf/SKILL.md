@@ -1,13 +1,13 @@
 ---
 name: webperf
-description: Audit browser-facing performance. Use when the user asks for webperf, /webperf, @webperf, web performance, Lighthouse, Core Web Vitals, or frontend performance review.
+description: Run a web performance audit for browser-facing applications. Use when the user asks for webperf, /webperf, @webperf, web performance, Lighthouse, Core Web Vitals, PageSpeed Insights, CrUX, or frontend performance review.
 ---
 
 # Webperf
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/webperf` command. Use this only for browser-facing applications or pages.
+Audit browser-facing performance only. Use Deep mode when Lighthouse, PageSpeed Insights, CrUX, DevTools trace, a live URL with browser tooling, or equivalent runtime metrics are available; otherwise use Quick mode and label findings as potential impact.
 
 ## When to Use
 

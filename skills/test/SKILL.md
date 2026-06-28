@@ -1,13 +1,13 @@
 ---
 name: test
-description: Run a test-driven workflow or reproduce a bug with a failing test. Use when the user asks for test, /test, @test, TDD, regression tests, or bug reproduction.
+description: Run a TDD workflow by writing failing tests, implementing, and verifying. Use when the user asks for test, /test, @test, TDD, regression tests, bug reproduction, or the Prove-It pattern.
 ---
 
 # Test
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/test` command. This is a thin wrapper around `skills/test-driven-development/SKILL.md`.
+Run the test-driven workflow. Invoke `skills/test-driven-development/SKILL.md`; for new features, write failing tests for expected behavior before implementation, and for bugs, reproduce the failure first with the Prove-It pattern.
 
 ## When to Use
 

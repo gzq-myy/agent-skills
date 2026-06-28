@@ -1,13 +1,13 @@
 ---
 name: plan
-description: Break an existing spec into tasks/plan.md and tasks/todo.md. Use when the user asks for plan, /plan, @plan, task breakdown, implementation plan, or planning from SPEC.md.
+description: Break work into small verifiable tasks with acceptance criteria and dependency ordering. Use when the user asks for plan, /plan, @plan, task breakdown, implementation plan, or planning from SPEC.md.
 ---
 
 # Plan
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/plan` command. This is a thin wrapper around `skills/planning-and-task-breakdown/SKILL.md`.
+Break an existing spec into small, ordered, verifiable tasks. Invoke `skills/planning-and-task-breakdown/SKILL.md`, read `SPEC.md` or the equivalent spec, then save the plan to `tasks/plan.md` and the task list to `tasks/todo.md`.
 
 ## When to Use
 

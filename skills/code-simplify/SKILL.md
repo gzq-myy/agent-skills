@@ -1,13 +1,13 @@
 ---
 name: code-simplify
-description: Simplify code while preserving behavior. Use when the user asks for code-simplify, /code-simplify, @code-simplify, simplify code, reduce complexity, or clean up recent changes.
+description: Simplify code for clarity and maintainability without changing behavior. Use when the user asks for code-simplify, /code-simplify, @code-simplify, simplify code, reduce complexity, or clean up recent changes.
 ---
 
 # Code Simplify
 
 ## Overview
 
-Codex entrypoint mirroring the Claude Code `/code-simplify` command. This is a thin wrapper around `skills/code-simplification/SKILL.md`.
+Simplify recently changed code or the specified scope while preserving exact behavior. Invoke `skills/code-simplification/SKILL.md`, study the code and its tests first, apply simplifications incrementally, and verify the result.
 
 ## When to Use
 
