@@ -142,7 +142,28 @@ Use agent definitions from `agents/` as Copilot personas and skill content in `.
 </details>
 
 <details>
-<summary><b>Codex / Other Agents</b></summary>
+<summary><b>Codex</b></summary>
+
+Install from this repository as a Codex plugin:
+
+```bash
+codex plugin marketplace add gzq-myy/agent-skills
+codex plugin add agent-skills@agent-skills
+```
+
+For local development, register your checkout instead:
+
+```bash
+codex plugin marketplace add /path/to/agent-skills
+codex plugin add agent-skills@agent-skills
+```
+
+After installation, start a new Codex thread and invoke skills directly, such as `@spec-driven-development`. See [docs/codex-setup.md](docs/codex-setup.md).
+
+</details>
+
+<details>
+<summary><b>Other Agents</b></summary>
 
 Skills are plain Markdown - they work with any agent that accepts system prompts or instruction files. See [docs/getting-started.md](docs/getting-started.md).
 
@@ -311,9 +332,11 @@ agent-skills/
 ├── agents/                            # 4 specialist personas
 ├── references/                        # 5 supplementary checklists
 ├── hooks/                             # Session lifecycle hooks
+├── .codex-plugin/plugin.json          # Codex plugin manifest
 ├── .claude/commands/                  # 8 slash commands (Claude Code)
 ├── .gemini/commands/                  # 8 slash commands (Gemini CLI)
 ├── commands/                          # 8 slash commands (Antigravity CLI)
+├── .agents/plugins/marketplace.json   # Codex marketplace entry
 ├── plugin.json                        # Antigravity plugin manifest
 └── docs/                              # Setup guides per tool
 ```
