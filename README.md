@@ -158,7 +158,7 @@ codex plugin marketplace add /path/to/agent-skills
 codex plugin add agent-skills@agent-skills
 ```
 
-After installation, start a new Codex thread and use the Codex entrypoint skills (`@spec`, `@plan`, `@build`, etc.). See [docs/codex-setup.md](docs/codex-setup.md).
+After installation, start a new Codex thread and use the Codex entrypoint skills (`@agent-spec`, `@agent-plan`, `@agent-build`, etc.). See [docs/codex-setup.md](docs/codex-setup.md).
 
 </details>
 
@@ -187,14 +187,14 @@ The commands above are entry points. The pack includes 32 skills total — 23 li
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
-| [spec](skills/spec/SKILL.md) | Codex entrypoint for the `/spec` workflow | Use `@spec` when defining requirements before implementation |
-| [plan](skills/plan/SKILL.md) | Codex entrypoint for the `/plan` workflow | Use `@plan` when breaking a spec into tasks |
-| [build](skills/build/SKILL.md) | Codex entrypoint for the `/build` workflow | Use `@build` or `@build auto` when implementing planned tasks |
-| [test](skills/test/SKILL.md) | Codex entrypoint for the `/test` workflow | Use `@test` for TDD or bug reproduction |
-| [review](skills/review/SKILL.md) | Codex entrypoint for the `/review` workflow | Use `@review` for code review |
-| [ship](skills/ship/SKILL.md) | Codex entrypoint for the `/ship` workflow | Use `@ship` for release readiness |
-| [code-simplify](skills/code-simplify/SKILL.md) | Codex entrypoint for the `/code-simplify` workflow | Use `@code-simplify` when simplifying code |
-| [webperf](skills/webperf/SKILL.md) | Codex entrypoint for the `/webperf` workflow | Use `@webperf` for browser-facing performance audits |
+| [agent-spec](skills/agent-spec/SKILL.md) | Codex entrypoint for the spec workflow | Use `@agent-spec` when defining requirements before implementation |
+| [agent-plan](skills/agent-plan/SKILL.md) | Codex entrypoint for the planning workflow | Use `@agent-plan` when breaking a spec into tasks |
+| [agent-build](skills/agent-build/SKILL.md) | Codex entrypoint for the build workflow | Use `@agent-build` or `@agent-build auto` when implementing planned tasks |
+| [agent-test](skills/agent-test/SKILL.md) | Codex entrypoint for the test workflow | Use `@agent-test` for TDD or bug reproduction |
+| [agent-review](skills/agent-review/SKILL.md) | Codex entrypoint for the review workflow | Use `@agent-review` for code review |
+| [agent-ship](skills/agent-ship/SKILL.md) | Codex entrypoint for the ship workflow | Use `@agent-ship` for release readiness |
+| [agent-code-simplify](skills/agent-code-simplify/SKILL.md) | Codex entrypoint for the code simplification workflow | Use `@agent-code-simplify` when simplifying code |
+| [agent-webperf](skills/agent-webperf/SKILL.md) | Codex entrypoint for the web performance workflow | Use `@agent-webperf` for browser-facing performance audits |
 
 ### Define - Clarify what to build
 
@@ -341,14 +341,14 @@ agent-skills/
 │   ├── documentation-and-adrs/        #   Ship
 │   ├── observability-and-instrumentation/ # Ship
 │   ├── shipping-and-launch/           #   Ship
-│   ├── spec/                          #   Codex wrapper for /spec
-│   ├── plan/                          #   Codex wrapper for /plan
-│   ├── build/                         #   Codex wrapper for /build
-│   ├── test/                          #   Codex wrapper for /test
-│   ├── review/                        #   Codex wrapper for /review
-│   ├── ship/                          #   Codex wrapper for /ship
-│   ├── code-simplify/                 #   Codex wrapper for /code-simplify
-│   ├── webperf/                       #   Codex wrapper for /webperf
+│   ├── agent-spec/                    #   Codex wrapper for spec workflow
+│   ├── agent-plan/                    #   Codex wrapper for planning workflow
+│   ├── agent-build/                   #   Codex wrapper for build workflow
+│   ├── agent-test/                    #   Codex wrapper for test workflow
+│   ├── agent-review/                  #   Codex wrapper for review workflow
+│   ├── agent-ship/                    #   Codex wrapper for ship workflow
+│   ├── agent-code-simplify/           #   Codex wrapper for simplification workflow
+│   ├── agent-webperf/                 #   Codex wrapper for web performance workflow
 │   └── using-agent-skills/            #   Meta: how to use this pack
 ├── agents/                            # 4 specialist personas
 ├── references/                        # 5 supplementary checklists

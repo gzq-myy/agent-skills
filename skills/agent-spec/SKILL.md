@@ -1,9 +1,9 @@
 ---
-name: spec
-description: Start spec-driven development by writing a structured specification before code. Use when the user asks for spec, /spec, @spec, requirements, acceptance criteria, or feature definition.
+name: agent-spec
+description: Start spec-driven development by writing a structured specification before code. Use when the user asks for agent-spec, @agent-spec, requirements, acceptance criteria, or feature definition.
 ---
 
-# Spec
+# Agent Spec
 
 ## Overview
 
@@ -11,7 +11,7 @@ Use the `spec-driven-development` skill. Write a structured spec before implemen
 
 ## When to Use
 
-- The user asks for `@spec`, `/spec`, a spec, requirements, acceptance criteria, or a feature definition.
+- The user asks for `@agent-spec`, `agent-spec`, requirements, acceptance criteria, or a feature definition.
 - A feature or significant change should be clarified before implementation.
 - Requirements need a written source of truth before planning or code changes.
 
@@ -36,11 +36,11 @@ Use the `spec-driven-development` skill. Write a structured spec before implemen
 
 | Rationalization | Reality |
 |---|---|
-| "I'll start coding and write the spec later." | `@spec` means define the work before implementation. |
+| "I'll start coding and write the spec later." | `@agent-spec` means define the work before implementation. |
 | "The request is obvious." | The spec still needs explicit acceptance criteria and boundaries. |
 
 ## Red Flags
 
-- Implementation files changed during `@spec`.
+- Implementation files changed during `@agent-spec`.
 - Missing success criteria.
 - Ambiguous requirements were guessed instead of listed as open questions.

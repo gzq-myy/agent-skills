@@ -1,9 +1,9 @@
 ---
-name: plan
-description: Break work into small verifiable tasks with acceptance criteria and dependency ordering. Use when the user asks for plan, /plan, @plan, task breakdown, implementation plan, or planning from SPEC.md.
+name: agent-plan
+description: Break work into small verifiable tasks with acceptance criteria and dependency ordering. Use when the user asks for agent-plan, @agent-plan, task breakdown, implementation plan, or planning from SPEC.md.
 ---
 
-# Plan
+# Agent Plan
 
 ## Overview
 
@@ -11,7 +11,7 @@ Use the `planning-and-task-breakdown` skill. Break an existing spec into small, 
 
 ## When to Use
 
-- The user asks for `@plan`, `/plan`, an implementation plan, task breakdown, or planning from a spec.
+- The user asks for `@agent-plan`, `agent-plan`, an implementation plan, task breakdown, or planning from a spec.
 - A spec exists and needs ordered, verifiable tasks.
 - Work needs checkpoints before implementation.
 
@@ -19,7 +19,7 @@ Use the `planning-and-task-breakdown` skill. Break an existing spec into small, 
 
 1. Use the `planning-and-task-breakdown` skill.
 2. Read the existing spec from `SPEC.md`, `docs/SPEC.md`, or `spec/*`.
-3. If no spec exists, stop and ask the user to run `@spec` first or provide the spec path.
+3. If no spec exists, stop and ask the user to run `@agent-spec` first or provide the spec path.
 4. Read only during planning; do not implement code.
 5. Identify dependencies, slice work vertically, and define verification for each task.
 6. Save the implementation plan to `tasks/plan.md`.
@@ -38,11 +38,11 @@ Use the `planning-and-task-breakdown` skill. Break an existing spec into small, 
 
 | Rationalization | Reality |
 |---|---|
-| "I can plan while coding." | `@plan` is read-only planning before implementation. |
+| "I can plan while coding." | `@agent-plan` is read-only planning before implementation. |
 | "The tasks are obvious." | The command produces concrete task files with acceptance criteria and verification. |
 
 ## Red Flags
 
-- Code changed during `@plan`.
+- Code changed during `@agent-plan`.
 - Tasks lack verification steps.
 - The plan ignores dependency order.

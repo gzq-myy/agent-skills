@@ -1,9 +1,9 @@
 ---
-name: ship
-description: Run the pre-launch checklist with specialist review and a go/no-go decision. Use when the user asks for ship, /ship, @ship, release readiness, launch review, rollback planning, or go/no-go.
+name: agent-ship
+description: Run the pre-launch checklist with specialist review and a go/no-go decision. Use when the user asks for agent-ship, @agent-ship, release readiness, launch review, rollback planning, or go/no-go.
 ---
 
-# Ship
+# Agent Ship
 
 ## Overview
 
@@ -11,7 +11,7 @@ Use the `shipping-and-launch` skill. Run the pre-launch review, fan out to quali
 
 ## When to Use
 
-- The user asks for `@ship`, `/ship`, launch review, release readiness, or go/no-go.
+- The user asks for `@agent-ship`, `agent-ship`, launch review, release readiness, or go/no-go.
 - A change is ready for production-bound review.
 - The user needs rollback, quality, security, and test readiness checked together.
 
@@ -42,7 +42,7 @@ Include blockers, recommended fixes, acknowledged risks, rollback plan, and spec
 | Rationalization | Reality |
 |---|---|
 | "The diff is small, so it can ship." | Small diffs can still affect security, data, or operations. |
-| "Rollback is obvious." | `@ship` requires an explicit rollback plan before any `GO` decision. |
+| "Rollback is obvious." | `@agent-ship` requires an explicit rollback plan before any `GO` decision. |
 
 ## Red Flags
 

@@ -44,20 +44,20 @@ If you merge the change into the fork's default branch, omit `--ref`.
 Use the short Codex entrypoint skills in chat:
 
 ```text
-@spec
-@plan
-@build
-@build auto
-@test
-@review
-@ship
-@code-simplify
-@webperf
+@agent-spec
+@agent-plan
+@agent-build
+@agent-build auto
+@agent-test
+@agent-review
+@agent-ship
+@agent-code-simplify
+@agent-webperf
 ```
 
 These mirror the Claude Code slash command workflows. Codex does not currently
-register plugin-provided slash commands, so use `@spec` instead of `/spec`,
-`@plan` instead of `/plan`, and `@build` instead of `/build`.
+register plugin-provided slash commands, so these entrypoints use the
+`agent-*` prefix to avoid collisions with built-in commands.
 
 You can still invoke the underlying lifecycle skills directly, such as
 `@spec-driven-development` or `@planning-and-task-breakdown`, when you want the
@@ -69,7 +69,7 @@ base workflow without command-style orchestration.
   marketplace and points the `agent-skills` plugin at the repository root.
 - `.codex-plugin/plugin.json` is the Codex plugin manifest.
 - `skills/` is the shared skill directory consumed by Codex and other agents.
-  Short wrapper skills such as `@spec`, `@plan`, and `@build` provide Codex
+  Short wrapper skills such as `@agent-spec`, `@agent-plan`, and `@agent-build` provide Codex
   entrypoints for the Claude Code slash command workflows.
 
 Claude Code slash commands in `.claude/commands/` remain Claude-specific. In

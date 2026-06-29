@@ -1,29 +1,29 @@
 ---
-name: build
-description: Implement tasks incrementally - build, test, verify, and commit. Use when the user asks for build, /build, @build, build auto, implement the next task, or run the approved plan.
+name: agent-build
+description: Implement tasks incrementally - build, test, verify, and commit. Use when the user asks for agent-build, @agent-build, agent-build auto, implement the next task, or run the approved plan.
 ---
 
-# Build
+# Agent Build
 
 ## Overview
 
-Use the `incremental-implementation` skill alongside the `test-driven-development` skill. Implement the next planned task by default, or run the whole approved plan when the user asks for `@build auto` or `@build all`.
+Use the `incremental-implementation` skill alongside the `test-driven-development` skill. Implement the next planned task by default, or run the whole approved plan when the user asks for `@agent-build auto` or `@agent-build all`.
 
 ## When to Use
 
-- The user asks for `@build`, `/build`, implementation, the next task, or `build auto`.
+- The user asks for `@agent-build`, `agent-build`, implementation, the next task, or `agent-build auto`.
 - A spec and plan exist and the user wants code changes.
 - The user wants incremental, verified task execution.
 
 ## Modes
 
-- `@build` implements the next pending task and then stops.
-- `@build auto` or `@build all` plans if needed, gets one explicit approval, then implements every task in dependency order.
+- `@agent-build` implements the next pending task and then stops.
+- `@agent-build auto` or `@agent-build all` plans if needed, gets one explicit approval, then implements every task in dependency order.
 
 ## Default: One Task
 
 1. Read the next pending task from `tasks/todo.md` or `tasks/plan.md`.
-2. If no plan exists, stop and ask the user to run `@plan` first.
+2. If no plan exists, stop and ask the user to run `@agent-plan` first.
 3. Use the `incremental-implementation` skill and the `test-driven-development` skill.
 4. Read the task's acceptance criteria.
 5. Load only the relevant context and existing patterns.
@@ -34,7 +34,7 @@ Use the `incremental-implementation` skill alongside the `test-driven-developmen
 
 ## Auto: Whole Plan
 
-1. Require a spec at `SPEC.md`, `docs/SPEC.md`, or `spec/*`. If none exists, stop and ask the user to run `@spec` first.
+1. Require a spec at `SPEC.md`, `docs/SPEC.md`, or `spec/*`. If none exists, stop and ask the user to run `@agent-spec` first.
 2. Run `git status --porcelain`.
 3. If unrelated local changes exist outside expected planning artifacts, ask how to proceed before editing.
 4. If `tasks/plan.md` does not exist, use the `planning-and-task-breakdown` skill and create it.
@@ -55,7 +55,7 @@ Use the `incremental-implementation` skill alongside the `test-driven-developmen
 
 | Rationalization | Reality |
 |---|---|
-| "I'll implement several tasks at once." | Default `@build` handles one task; whole-plan execution needs `@build auto` approval. |
+| "I'll implement several tasks at once." | Default `@agent-build` handles one task; whole-plan execution needs `@agent-build auto` approval. |
 | "I'll test at the end." | Each task needs its own test and verification loop. |
 | "I'll include this small cleanup." | Keep task commits scoped and rollback-friendly. |
 

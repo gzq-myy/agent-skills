@@ -1,9 +1,9 @@
 ---
-name: test
-description: Run a TDD workflow by writing failing tests, implementing, and verifying. Use when the user asks for test, /test, @test, TDD, regression tests, bug reproduction, or the Prove-It pattern.
+name: agent-test
+description: Run a TDD workflow by writing failing tests, implementing, and verifying. Use when the user asks for agent-test, @agent-test, TDD, regression tests, bug reproduction, or the Prove-It pattern.
 ---
 
-# Test
+# Agent Test
 
 ## Overview
 
@@ -11,7 +11,7 @@ Use the `test-driven-development` skill. For new behavior, write failing tests b
 
 ## When to Use
 
-- The user asks for `@test`, `/test`, TDD, regression tests, test coverage, or bug reproduction.
+- The user asks for `@agent-test`, `agent-test`, TDD, regression tests, test coverage, or bug reproduction.
 - New behavior needs proof through tests.
 - A bug should be reproduced before fixing.
 
@@ -35,7 +35,7 @@ Use the `test-driven-development` skill. For new behavior, write failing tests b
 
 | Rationalization | Reality |
 |---|---|
-| "The fix is simple, no test needed." | `@test` exists to prove behavior with tests. |
+| "The fix is simple, no test needed." | `@agent-test` exists to prove behavior with tests. |
 | "I'll write tests after the code." | This workflow starts with a failing test when behavior changes. |
 
 ## Red Flags

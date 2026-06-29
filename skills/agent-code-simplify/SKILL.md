@@ -1,9 +1,9 @@
 ---
-name: code-simplify
-description: Simplify code for clarity and maintainability without changing behavior. Use when the user asks for code-simplify, /code-simplify, @code-simplify, simplify code, reduce complexity, or clean up recent changes.
+name: agent-code-simplify
+description: Simplify code for clarity and maintainability without changing behavior. Use when the user asks for agent-code-simplify, @agent-code-simplify, simplify code, reduce complexity, or clean up recent changes.
 ---
 
-# Code Simplify
+# Agent Code Simplify
 
 ## Overview
 
@@ -11,7 +11,7 @@ Use the `code-simplification` skill. Simplify recently changed code or the speci
 
 ## When to Use
 
-- The user asks for `@code-simplify`, `/code-simplify`, simplify code, reduce complexity, or clean up recent changes.
+- The user asks for `@agent-code-simplify`, `agent-code-simplify`, simplify code, reduce complexity, or clean up recent changes.
 - Code works but is harder to read or maintain than necessary.
 - The target scope is clear enough to preserve behavior.
 
@@ -36,7 +36,7 @@ Use the `code-simplification` skill. Simplify recently changed code or the speci
 
 | Rationalization | Reality |
 |---|---|
-| "I'll refactor broadly while here." | `@code-simplify` stays inside the requested scope. |
+| "I'll refactor broadly while here." | `@agent-code-simplify` stays inside the requested scope. |
 | "This abstraction might help later." | Do not add abstractions without a current use. |
 
 ## Red Flags

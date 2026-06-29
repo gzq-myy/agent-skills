@@ -93,3 +93,4 @@ For the full format, naming conventions, frontmatter rules, supporting-file thre
 
 - Wrapper skills should borrow the corresponding `.claude/commands/*.md` intent and avoid implementation-background prose in `description` or `Overview`.
 - Wrapper skill runtime text should use skill names, not command source paths or slash-like skill references.
+- Codex command wrapper skills should use the `agent-*` prefix consistently to avoid collisions with built-in commands.

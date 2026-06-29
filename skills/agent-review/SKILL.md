@@ -1,9 +1,9 @@
 ---
-name: review
-description: Conduct a five-axis code review across correctness, readability, architecture, security, and performance. Use when the user asks for review, /review, @review, code review, or pre-merge review.
+name: agent-review
+description: Conduct a five-axis code review across correctness, readability, architecture, security, and performance. Use when the user asks for agent-review, @agent-review, code review, or pre-merge review.
 ---
 
-# Review
+# Agent Review
 
 ## Overview
 
@@ -11,7 +11,7 @@ Use the `code-review-and-quality` skill. Review the current changes across corre
 
 ## When to Use
 
-- The user asks for `@review`, `/review`, code review, pre-merge review, or current diff review.
+- The user asks for `@agent-review`, `agent-review`, code review, pre-merge review, or current diff review.
 - A change needs quality, correctness, security, or performance review.
 - The user wants findings before a summary.
 
@@ -38,7 +38,7 @@ Report findings first, then open questions or assumptions, then a short summary.
 
 | Rationalization | Reality |
 |---|---|
-| "I'll summarize first." | `@review` should lead with findings so risks are visible. |
+| "I'll summarize first." | `@agent-review` should lead with findings so risks are visible. |
 | "This is just style." | Correctness, risk, and missing tests come before style. |
 
 ## Red Flags
